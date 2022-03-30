@@ -1,0 +1,9 @@
+--- #  directory deletion
+- name: my test playbook
+  hosts: all
+  tasks:
+    - name: Remove directory
+      file:
+        path: /home/ansible/johndir
+        state: absent
+

@@ -1,0 +1,9 @@
+--- # creating directory
+- name: my test playbook
+  hosts: all
+  tasks:
+    - name: creating a directory
+      file:
+        path: /home/ansible/johndir
+        state: directory
+

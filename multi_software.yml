@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: installing multiple s/w
+      yum:
+        name: ['git','docker','httpd','tree','java','mysql']
+        state: installed
+
+    - name: start service
+      service:
+        name: git
+        state: started
+        name: docker
+        state: started
+        name: tree
+        state: started
+        name: java
+        state: started
+        name: mysql
+        state: started
+        name: httpd
+        state: started
+
+

@@ -1,0 +1,12 @@
+--- # installation git
+- name: my test play book
+  hosts: all
+  become: yes
+
+
+  tasks:
+    - name: git installation
+      yum:
+        name: git
+        state: latest
+  

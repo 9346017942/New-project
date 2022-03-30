@@ -1,0 +1,7 @@
+--- 
+- hosts: all
+  tasks: 
+    - name: creating file
+      file:
+        path: /home/ansible/johnnyfile
+        state: touch

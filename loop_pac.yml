@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: installing multiple s/w
+      yum: name='{{item}}' state=installed
+      with_items:
+        - httpd
+        - tree
+        - docker
+        - git
+        - java
+        - mysql
+        

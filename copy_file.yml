@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: copying file
+      copy:
+        src: /home/ansible/index.html
+        dest: /home/ansible
+        owner: mahesh

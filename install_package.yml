@@ -1,0 +1,11 @@
+--- # package installation
+- name: My test play book
+  hosts: all
+  become: true
+  
+
+  tasks: 
+    - name: package installing
+      yum: 
+        name: httpd
+        state: present

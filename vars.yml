@@ -1,0 +1,11 @@
+--- 
+- hosts: all
+  become: true
+
+  vars: 
+    pkgname: httpd
+
+
+  tasks:
+    - name: installing httpd in webservers
+      action: yum name='{{pkgname}}' state=present

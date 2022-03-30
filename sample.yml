@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+
+
+  tasks:
+    - name: creating file with ansible playbook
+      file: path=/tmp/mahesh.txt state=file
+
+
+    - name: creating a directory with ansible playbook
+      file: path=/tmp/Maheshdir state=directory
+    
+
+    - name: copying a file
+      copy: src=./maifile dest=/home/ansible
